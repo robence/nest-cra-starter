@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "yarn wsrun dev",
     "lint": "yarn wsrun lint",
-    "lint-fix": "yarn wsrun lint-fix"
+    "lint-fix": "yarn wsrun lint-fix",
+    "test": "yarn wsrun test"
   },
   "workspaces": [
     "backend",
