@@ -1,0 +1,14 @@
+{
+  "name": "nest-cra-starter",
+  "private": true,
+  "scripts": {
+    "dev": "yarn wsrun dev"
+  },
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "devDependencies": {
+    "wsrun": "^5.1.0"
+  }
+}
