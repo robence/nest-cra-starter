@@ -1,8 +1,9 @@
 version: 2
 jobs:
   build:
+    docker:
+      - image: node:8.0
     steps:
       - checkout
-      - run:
-          name: Test App
-          command: yarn run test
+      - run: yarn install
+      - run: yarn test
