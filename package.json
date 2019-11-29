@@ -2,13 +2,28 @@
   "name": "nest-cra-starter",
   "private": true,
   "scripts": {
-    "dev": "yarn wsrun dev"
+    "dev": "yarn wsrun dev",
+    "lint": "yarn wsrun lint",
+    "lint-fix": "yarn wsrun lint-fix"
   },
   "workspaces": [
     "backend",
     "frontend"
   ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.(ts|tsx)": [
+      "yarn run lint-fix",
+      "git add"
+    ]
+  },
   "devDependencies": {
+    "husky": "^3.1.0",
+    "lint-staged": "^9.5.0",
     "wsrun": "^5.1.0"
   }
 }
