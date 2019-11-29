@@ -11,6 +11,9 @@
 ``` $ yarn dev ```
 
 ### Features
+ - Fullstack Typescript - you can use types everywhere
+ - CI support via CircleCI running tests
+ - Precommit checks ESLint and Typescript errors
 
 
 ### Used technologies:
