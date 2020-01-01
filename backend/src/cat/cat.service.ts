@@ -13,16 +13,18 @@ export class CatService {
   ) {}
 
   async createCat(catDto: CatDto): Promise<Cat> {
-    const cat: Cat = await new this.catModel(catDto).save();
-
-    return cat;
+    return await new this.catModel(catDto).save();
   }
 
-  fetchAll(): Promise<Cat[]> {
+  fetchAll() {
     return this.catModel.find();
   }
 
-  async editArticle(id: string, catDto: CatDto): Promise<Document & Cat> {
+  showCat(id: string) {
+    return this.catModel.findById(id);
+  }
+
+  async editCat(id: string, catDto: CatDto) {
     const cat = await this.catModel.findById(id);
 
     const { age, breed, name } = catDto;
@@ -36,7 +38,7 @@ export class CatService {
     return cat;
   }
 
-  deleteArticle(id: string): Promise<Document & Cat> {
+  deleteCat(id: string) {
     return this.catModel.findByIdAndRemove(id);
   }
 }
