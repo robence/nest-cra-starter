@@ -14,11 +14,11 @@
     "start:prod": "node dist/main",
     "lint": "tsc --noEmit &&  eslint --ext ts src",
     "lint-fix": "tsc --noEmit && eslint --ext ts src --fix",
-    "test:unit": "jest",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
-    "test": "jest --config ./test/jest-e2e.json"
+    "test:e2e": "jest --config ./test/jest-e2e.json"
   },
   "dependencies": {
     "@hapi/joi": "^16.1.8",
